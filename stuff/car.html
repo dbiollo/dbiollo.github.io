@@ -4,61 +4,55 @@
 {
   "@context": "http://schema.org",
   "@type": "HowTo",
-  "author": "John Smith",
-  "datePublished": "2009-05-08",
-  "description": "Change a Flat Tire - JSON-LD version.",
-  "steps": {
-    "@type": "HowToSection",
-    "name": "First step"
-    "itemListElement": [
-      "3 or 4 ripe bananas, smashed",
-      "1 egg",
-      "3/4 cup of sugar"
-    ]
+  "name": "How to Bathe a Newborn Baby",
+  "video" : {
+      "name": "How to Bathe a Newborn Baby",
+      "@id": "NQ8lj9GIh5M",
+      "description": "Video of how to Bathe a Newborn Baby",
+      "thumbnailUrl": [
+"https://example.com/photos/16x9/photo.jpg"
+      ],
+      "contentUrl" : "https://www.youtube.com/watch?v=NQ8lj9GIh5M",
+      "uploadDate": "2019-01-05T08:00:00+08:00",
+      "hasPart": [
+        {
+          "@type": "Clip",
+          "@id": "clip1",
+          "name": "Clip 1",
+          "startOffset": 13,
+          "endOffset": 30
+        },
+        {
+          "@type": "Clip",
+          "@id": "clip2",
+          "name": "Clip 2",
+          "startOffset": 30,
+          "endOffset": 40
+        }
+        ]
   },
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Test the temperature",
+      "video" : {
+        "hasPart": {
+          "@id": "clip1"
+          }
+        }
+    }, {
+      "@type": "HowToStep",
+      "name": "Wipe baby's eyes",
+      "video" : {
+        "hasPart": {
+          "@id": "clip2"
+          }
+        }
+    }
+  ]
 }
+
 </script>
   
-<div itemscope itemtype="http://schema.org/HowTo">
-  <strong><span itemprop="description">Change a Flat Tire</span></strong>
-  <div itemprop="steps" itemscope itemtype="http://schema.org/HowToSection">
-    <div itemprop="name">Preparation</div>
-    <div itemprop="itemListElement">
-      <p>
-        Park the car.
-      </p>
-      <ul>
-        <li>Turn off the engine.</li>
-        <img />
-      </ul>
-    </div>
-    <div itemprop="itemListElement" itemscope itemtype="http://schema.org/HowToStep">
-      <div itemprop="itemListElement" itemscope itemtype="http://schema.org/HowToDirection">
-        <span itemprop="duringMedia"><img itemprop="image" href="lit-flares.jpg" /></span>
-        <p itemprop="text">Turn on your hazard lights and set the flares.</p>
-      </div>
-      <div itemprop="itemListElement" itemscope itemtype="http://schema.org/HowToTip">
-        <p itemprop="text">You're going to need space and want to be visible.<p>
-      </div>
-      <div itemprop="itemListElement">
-        <p>
-          Position your wheel wedges in front of the front tires if a rear tire is flat, or behind the rear tires if a front tire is flat.
-        </p>
-        <ul>
-          <li>You don't want the car to move while you're working on it.</li>
-          <img />
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div itemprop="steps" itemscope itemtype="http://schema.org/HowToSection">
-    <div itemprop="name">Raise the car</div>
-    <div itemprop="itemListElement" itemscope itemtype="http://schema.org/HowToStep">
-      <div itemprop="itemListElement" itemscope itemtype="http://schema.org/HowToDirection">
-        Position the jack underneath the car, next to the flat tire.
-      </div>
-    </div>
-  </div>
-</div>
 </body>
 </html>
